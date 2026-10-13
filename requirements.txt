@@ -1,0 +1,10 @@
+# Python 3.13. These are the exact versions used for the results in the paper.
+# Any recent versions of the same packages should also work (the code uses only stable APIs):
+#   pip install numpy scipy pandas matplotlib numba rdata pytest
+numpy==2.5.3
+scipy==1.18.1
+pandas==3.0.5
+matplotlib==3.11.2
+numba==0.68.0
+rdata==1.1.0
+pytest==9.1.1

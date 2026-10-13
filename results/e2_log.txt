@@ -1,0 +1,4 @@
+SP500 done (28s)
+FTSE100 done (60s)
+DJIA done (91s)
+done

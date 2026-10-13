@@ -1,0 +1,14 @@
+# downloaded index data (GPL-3, not redistributed; see README "Data")
+data/
+
+# quick-run outputs (./run_all.sh --quick)
+results/*_quick*
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# macOS
+.DS_Store
