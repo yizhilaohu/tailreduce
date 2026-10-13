@@ -1,7 +1,7 @@
 """Publication figures from the experiment results.
 
-Figure 2 (fig_regret_vs_K.pdf): worst-case regret / M = D+ + D- versus budget K (E1, N = 5000).
-Figure 3 (fig_kmin_vs_a.pdf):   minimum exact size K_min / N versus tail mass a under uniform and
+Figure 3 (fig_regret_vs_K.pdf): worst-case regret / M = D+ + D- versus budget K (E1, N = 5000).
+Figure 4 (fig_kmin_vs_a.pdf):   minimum exact size K_min / N versus tail mass a under uniform and
                                 time-decayed weights (E2, N = 2000).
 
 Color follows the method (fixed categorical slots, validated for adjacent-pair CVD separation);
@@ -130,7 +130,7 @@ def fig_kmin(outdir):
         c = BLUE_RAMP[key]
         if hl in ("63", "250"):
             ax.fill_between(a, lo, hi, color=c, alpha=0.22 if hl == "63" else 0.30, lw=0,
-                            label=f"10--90% range, {hl} days")
+                            label=f"10–90% range, {hl} days")
         ax.plot(a, med, color=c if hl != "63" else "#5598e7", lw=1.4, ls=styles[hl], label=f"median, {labels[hl]}"
                 if hl != "uniform" else labels[hl])
     ax.set_xlabel("tail mass $a$")
@@ -143,7 +143,7 @@ def fig_kmin(outdir):
         ax.spines[s_].set_visible(False)
     h, l = ax.get_legend_handles_labels()
     want = ["equal weights", "median, half-life 1000 days", "median, half-life 250 days", "median, half-life 63 days",
-            "10--90% range, 250 days", "10--90% range, 63 days"]
+            "10–90% range, 250 days", "10–90% range, 63 days"]
     idx = [l.index(x) for x in want if x in l]
     ax.legend([h[i] for i in idx], [l[i] for i in idx], frameon=False, loc="upper left", handlelength=2.0,
               fontsize=6.3)

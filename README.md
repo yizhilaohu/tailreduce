@@ -69,7 +69,7 @@ The quick run does not touch the full results or the paper's tables and figures.
 ```bash
 python3 scripts/download_data.py          # data/raw, data/processed (checksums are verified)
 python3 -m pytest -q tests                # unit tests, about 30 s
-python3 scripts/verify_theory.py          # about 8 min, results/verification.json (Table S1)
+python3 scripts/verify_theory.py          # about 8 min, results/verification.json (not reported in the paper)
 python3 scripts/run_e1_worst_case.py      # about 7 min, results/e1_worst_case.csv (51,840 rows)
 python3 scripts/run_e2_online_weights.py  # about 1.5 min, results/e2_online.csv (9,360 rows) and K_min files
 python3 scripts/run_e3_decisions.py       # about 5.5 min, results/e3_decisions.csv (103,680 rows)
@@ -91,11 +91,11 @@ tolerances. All quoted numbers are rounded.
 
 | Paper item | Produced by | From |
 |---|---|---|
-| Figure 1 (Example 1) | TikZ in `../paper/main.tex` | — |
-| Figure 2; Tables S2–S6 | `make_figures.py`, `make_tables.py` | `results/e1_worst_case.csv` |
-| Table 1, Figure 3; Tables S7–S10 | `make_tables.py`, `make_figures.py` | `results/e2_online.csv`, `results/e2_kmin_curve.csv`, `results/e2_kmin_table.csv` |
-| Table 2; Tables S11–S13 | `make_tables.py` | `results/e3_decisions.csv` |
-| Table S1 (numerical check) | `make_tables.py` | `results/verification.json` |
+| Figure 1 (roadmap), Figure 2 (Example 1) | TikZ in `../paper/main.tex` | — |
+| Figure 3; Tables S1–S5 | `make_figures.py`, `make_tables.py` | `results/e1_worst_case.csv` |
+| Table 1, Figure 4; Tables S6–S9 | `make_tables.py`, `make_figures.py` | `results/e2_online.csv`, `results/e2_kmin_curve.csv`, `results/e2_kmin_table.csv` |
+| Table 2; Tables S10–S12 | `make_tables.py` | `results/e3_decisions.csv` |
+| Numerical check of the results (not reported in the paper) | `make_tables.py` | `results/verification.json` |
 | Numbers quoted in the text (ratios, run times, ...) | `make_tables.py` → `../paper/tables/facts.tex` | `results/facts.json` |
 
 ## The reduction rules
